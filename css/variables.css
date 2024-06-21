@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #222;
+  --secondary-color: #f4f4f4;
+  --app-bg-color: #103a58;
+  --info-color: #34bddb;
+  --positive-color: #38c04f;
+  --negative-color: #db3434;
+  --warning-color: #dbdb34;
+  --box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  --border-radius: 5px;
+}

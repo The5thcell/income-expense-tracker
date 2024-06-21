@@ -1,0 +1,14 @@
+.app-container {
+  height: 100vh;
+  max-width: 600px;
+  background-color: var(--app-bg-color);
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  flex-direction: column;
+  & h2 {
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+  }
+}

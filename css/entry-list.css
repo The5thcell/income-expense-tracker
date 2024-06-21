@@ -1,0 +1,53 @@
+.entry-list {
+  width: 100%;
+  .entry-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & button {
+      &:first-child {
+        margin-right: 10px;
+        &:hover {
+          background-color: var(--positive-color);
+        }
+      }
+      &:last-child:hover {
+        background-color: var(--negative-color);
+        color: var(--primary-color);
+      }
+    }
+  }
+  #entries {
+    height: 250px;
+    overflow-y: scroll;
+    padding: 1rem 0.3rem;
+    & li {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      font-weight: 500;
+      border-radius: var(--border-radius);
+      background-color: var(--primary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .fa-trash {
+        color: var(--negative-color);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+
+      &.income {
+        color: var(--positive-color);
+      }
+      &.expense {
+        color: var(--negative-color);
+      }
+    }
+  }
+}

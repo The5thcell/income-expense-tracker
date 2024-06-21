@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../links.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <section class="entry-form">
+        <select id="entry-type">
+          <option value="income" class="income">Income</option>
+          <option value="expense" class="expense">Expense</option>
+        </select>
+        <input id="entry-description" class="entry" placeholder="Description" />
+        <input id="entry-amount" class="entry" placeholder="Amount" />
+        <div class="entry-actions">
+          <button class="btn" id="addEntriesBtn">
+            <i class="fa-solid fa-plus"></i> <span class="text">Add</span>
+          </button>
+          <button class="btn" id="saveEntriesBtn">
+            <i class="fa-regular fa-floppy-disk"></i>
+            <span class="text">Save</span>
+          </button>
+        </div>
+      </section>
+      <section class="results">
+        <section class="summary">
+          <h2>Summary</h2>
+          <p>Total Income: $ <span id="total-income">0.00</span></p>
+          <p>Total Expanses: $ <span id="total-expenses">0.00</span></p>
+          <p>Net Total: $ <span id="net-total">0.00</span></p>
+        </section>
+        <section class="diagrams">
+          <div class="chart">
+            <div class="bar" id="incomeBar">
+              <p id="incomeValueDisplay">0.00</p>
+            </div>
+          </div>
+          <div class="chart">
+            <div class="bar" id="expenseBar">
+              <p id="expenseValueDisplay">0.00</p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="entry-list">
+        <section class="entry-list-header">
+          <h2>entries</h2>
+          <section class="actions">
+            <button id="save-doc" class="btn">
+              <i class="fa-regular fa-floppy-disk"></i>
+              <span class="text">Doc</span></button
+            ><button id="clearEntriesBtn" class="btn">
+              <i class="fa-solid fa-trash"></i>
+              <span class="text">Clear</span>
+            </button>
+          </section>
+        </section>
+        <ul id="entries">
+          <li>
+            + entryDescription - $15210
+            <i class="fa-solid fa-trash" onclick="deleteEntry"></i>
+          </li>
+          <li>
+            - entryDescription - $5441
+            <i class="fa-solid fa-trash" onclick="deleteEntry"></i>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

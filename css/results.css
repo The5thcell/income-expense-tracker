@@ -1,0 +1,55 @@
+.results {
+  width: 100%;
+  border: 1px solid #333;
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  .summary {
+    & p {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      & span {
+        &.positive {
+          color: var(--positive-color);
+        }
+        &.negative {
+          color: var(--negative-color);
+        }
+      }
+    }
+  }
+
+  .diagrams {
+    position: relative;
+    top: 90px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .chart {
+      width: 100%;
+      #incomeBar,
+      #expenseBar {
+        transition: width 0.3s;
+        background-color: var(--positive-color);
+        height: 40px;
+        border-radius: 0 5px 5px 0;
+        font-weight: 500;
+        padding-left: 0.5rem;
+        box-shadow: var(--box-shadow);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #expenseBar {
+        background-color: var(--negative-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+  & input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+  }
+
+  .entry-actions {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+    & button:hover {
+      &:first-child {
+        background-color: var(--info-color);
+        color: var(--secondary-color);
+      }
+      &:last-child {
+        background-color: var(--warning-color);
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+#entry-type {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius);
+}

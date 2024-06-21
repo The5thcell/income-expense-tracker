@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Export Report</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 1rem;
+        margin-left: 3rem;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Export Report - ${getToday()}</h1>
+
+    <h2>
+      Total Income: $${document.getElementById("total-income").textContent}
+    </h2>
+    <h2>
+      Total Expenses: $${document.getElementById("total-expenses").textContent}
+    </h2>
+    <h2>Net Total: $${document.getElementById("net-total").textContent}</h2>
+
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Amount</th>
+      </tr>
+    </table>
+  </body>
+</html>
